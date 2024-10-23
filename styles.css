@@ -49,3 +49,11 @@ p{
         }
     }
 }
+@media (min-width:380px) and (max-width:767px){
+    body{
+        padding: 0 16px;
+    }
+    .identidad{
+        flex-direction: column;
+    }
+}
