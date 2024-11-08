@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo</title>
+    <!-- Vincula el CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        :root {
+            --color-primario: #f2e094;
+            --color-secundario: #a19218;
+            --color-terciario: #be5944;
+            --color-fondo: #fef9ec;
+            --color-oscuro: #1b3d2f;
+            --color-oscuro-2: #4b4737;
+        }
+        /* Aseguramos que el body ocupe toda la altura de la ventana */
+        html, body {
+            height: 100%;
+        }
+
+        /* Usamos flexbox para distribuir el contenido */
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-fondo);
+        }
+
+        /* El main ocupa todo el espacio disponible */
+        main {
+            flex-grow: 1;
+            
+        }
+
+        /* Estilo para el header y el logo */
+        .navbar-brand {
+            flex-grow: 1;
+            text-align: left;
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        /* Asegurarse de que el logo se mantenga centrado en pantallas pequeñas */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                text-align: center;
+                flex-grow: 0;
+            }
+        }
+        .question {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--color-oscuro);
+        }
+        /* Estilo personalizado para los elementos del Accordion */
+        .accordion-button {
+            background-color: #ffffff; /* Fondo inicial */
+            color: #333; /* Color de texto inicial */
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--color-primario); /* Fondo al estar expandido */
+            color: #333; /* Color de texto al estar expandido */
+        }
+
+        /* Cambio de color del borde */
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.2rem #a191188a;
+        }
+
+        /* Estilo del cuerpo de la respuesta */
+        .accordion-body {
+            background-color: #ffffff;
+            color: #333;
+        }
+        /* Estilo para el footer */
+        footer {
+            background-color: var(--color-oscuro);
+            color: var(--color-fondo);
+            padding: 1rem;
+            text-align: center;
+        }
+        footer p {
+            color: #fff;
+            margin-bottom: 0;
+            span{
+            color: #FFF;
+            padding-left: 15px;
+            }
+        }
+        
+        footer img {
+            padding: 0.5em;
+            max-width: 220px;
+        }
+        footer br{
+            display: none;
+        }
+        header {
+            background-color: var(--color-primario);
+            color: var(--color-oscuro);
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .logo-img {
+            width: auto;
+            height: 75px;
+        }
+        .img-fluid {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="../index.html"><image class="logo-img" src="../assets/logo_opcion_3.png" alt="Bootstrap"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./turnos.html">Turnos en Línea</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./consejos.html">Consejos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./galeria.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><b>Preguntas Frecuentes</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- BODY -->
+<main class="container mt-2 mb-5">
+    <div class="row justify-content-center align-items-center text-center" style="margin-bottom: 30px; margin-top: 10px;"> 
+        <div class="col-md-6">
+            <h1><b>Preguntas Frecuentes</b></h1>
+            <p><i>Estas son algunas de las preguntas más frecuentes que hemos recibido</i></p>
+        </div>
+    </div>
+    <!-- Accordion de Bootstrap -->
+    <div class="accordion" id="accordionExample">
+
+        <!-- Pregunta 1 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                    ¿Con qué frecuencia debo realizar el mantenimiento preventivo de mi Chevy Clásico?
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Se recomienda realizar un mantenimiento preventivo cada 5,000 kilómetros o cada seis meses, lo que ocurra primero. Este incluye cambio de aceite, revisión de frenos, inspección de fluidos y chequeo del sistema eléctrico.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    ¿Ofrecen servicios de restauración para autos Chevy Clásico?
+                </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Sí, ofrecemos servicios de restauración completa o parcial para Chevy Clásico. Podemos ayudar a restaurar tanto la estética como el rendimiento del vehículo, incluyendo carrocería, pintura, interiores y mecánica.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    ¿Qué tipo de piezas utilizan para las reparaciones, originales o genéricas?
+                </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Dependiendo de las necesidades y preferencias del cliente, utilizamos tanto piezas originales como alternativas de calidad. Siempre recomendamos usar piezas originales para mantener la autenticidad del vehículo.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    ¿Puedo obtener una cotización antes de realizar una reparación?
+                </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Sí, ofrecemos cotizaciones gratuitas. Nuestros técnicos inspeccionarán tu Chevy Clásico y proporcionarán un presupuesto detallado antes de realizar cualquier trabajo.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    ¿Cuánto tiempo suele tomar una reparación completa del motor de un Chevy Clásico?
+                </button>
+            </h2>
+            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    El tiempo de reparación puede variar según el tipo de trabajo necesario, pero una reparación completa del motor suele tomar entre 1 a 2 semanas, dependiendo de la disponibilidad de piezas y la complejidad del problema.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                    ¿Realizan servicios de ajuste y puesta a punto para mejorar el rendimiento del auto?
+                </button>
+            </h2>
+            <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Sí, ofrecemos servicios de ajuste y puesta a punto para optimizar el rendimiento de tu Chevy Clásico. Esto incluye ajustes de carburador, cambios de bujías, calibración del sistema de encendido y revisión del sistema de combustible.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                    ¿Puedo agendar una cita para mantenimiento en línea?
+                </button>
+            </h2>
+            <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Sí, puedes agendar tu cita para mantenimiento o reparación directamente en nuestro sitio web. Solo necesitas completar el formulario de contacto o seleccionar una fecha disponible en nuestro sistema de reservas en línea.
+                </div>
+            </div>
+        </div>
+
+    </div> 
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center">
+    <div class="row container-fluid justify-content-center align-items-center no-margin">
+      <div class="text-center col-lg-8 col-md-6 col-12">
+        <p>Materia: Diseño y Desarrollo Web - 
+          <br>    
+          Curso: 2688 - Grupo: 5</p>
+        <p>© Todos los derechos reservados - 
+          <br>
+          Sitio desarrollado para uso educativo - 2024
+        </p>
+      </div>
+      <div class="text-center col-lg-4 col-md-6">
+        <img src="../assets/uade-logo.png" alt="logo uade" />
+      </div>
+    </div>
+  </footer>
+
+<!-- Scripts de Bootstrap (necesarios para el funcionamiento del menú hamburguesa) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

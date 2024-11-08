@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo</title>
+    <!-- Vincula el CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        :root {
+            --color-primario: #f2e094;
+            --color-secundario: #a19218;
+            --color-terciario: #be5944;
+            --color-fondo: #fef9ec;
+            --color-oscuro: #1b3d2f;
+            --color-oscuro-2: #4b4737;
+        }
+        /* Aseguramos que el body ocupe toda la altura de la ventana */
+        html, body {
+            height: 100%;
+        }
+
+        /* Usamos flexbox para distribuir el contenido */
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--color-fondo);
+        }
+
+        /* El main ocupa todo el espacio disponible */
+        main {
+            flex-grow: 1;
+            
+        }
+
+        /* Estilo para el header y el logo */
+        .navbar-brand {
+            flex-grow: 1;
+            text-align: left;
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        /* Asegurarse de que el logo se mantenga centrado en pantallas pequeñas */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                text-align: center;
+                flex-grow: 0;
+            }
+        }
+        .question {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--color-oscuro);
+        }
+        /* Estilo para el footer */
+        footer {
+            background-color: var(--color-oscuro);
+            color: var(--color-fondo);
+            padding: 1rem;
+            text-align: center;
+        }
+        footer p {
+            color: #fff;
+            margin-bottom: 0;
+            span{
+            color: #FFF;
+            padding-left: 15px;
+            }
+        }
+        
+        footer img {
+            padding: 0.5em;
+            max-width: 220px;
+        }
+        footer br{
+            display: none;
+        }
+        header {
+            background-color: var(--color-primario);
+            color: var(--color-oscuro);
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .logo-img {
+            width: auto;
+            height: 75px;
+        }
+        .img-fluid {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="../index.html"><image class="logo-img" src="../assets/logo_opcion_3.png" alt="Bootstrap"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./turnos.html">Turnos en Línea</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><b>Consejos</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./galeria.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./faq.html">Preguntas Frecuentes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- BODY -->
+<main class="container mt-2 mb-5">
+    <div class="row justify-content-center align-items-center text-center" style="margin-bottom: 30px; margin-top: 10px;"> 
+        <div class="col-md-6">
+            <h1><b>Consejos de Mantenimiento</b></h1>
+            <p><i>En esta sección encontrarás consejos para mantener tu auto en el mejor estado</i></p>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center mb-3">
+        <div class="col-md-8">
+            <h4 >1. Revisión Periódica del Sistema de Frenos</h4>
+            
+                <div class="card card-body">
+                    <p>La seguridad es lo primero, por lo que debes revisar los frenos cada 10,000 kilómetros. Inspecciona pastillas, discos y líquidos de freno. Un Chevy Clásico, al ser un modelo más antiguo, puede tener mayor desgaste en este sistema, por lo que es vital asegurar que funcione correctamente para evitar accidentes.</p>
+                </div>
+              
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center mb-3">
+        <div class="col-md-8">
+            <h4 >2. Cambio Regular de Aceite y Filtros</h4>
+            
+                <div class="card card-body">
+                    <p>Para mantener el motor en óptimas condiciones, realiza cambios de aceite cada 5,000 kilómetros. Utiliza aceites de buena calidad y cambia también el filtro de aceite. Esto ayuda a reducir el desgaste interno y a evitar acumulación de residuos. Además, revisa el filtro de aire y el de combustible para evitar problemas de rendimiento.</p>
+                </div>
+            
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center mb-3">
+        <div class="col-md-8">
+            <h4 >3. Inspección del Sistema Eléctrico</h4>
+            
+                <div class="card card-body">
+                    <p>El Chevy Clásico suele presentar fallas en el sistema eléctrico con el tiempo. Verifica regularmente el estado de la batería, las bujías y los cables de encendido. Asegúrate de que los terminales de la batería estén limpios y sin corrosión. Reemplaza cualquier componente que muestre signos de desgaste para evitar problemas de arranque.</p>
+                </div>
+              
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center mb-3">
+        <div class="col-md-8">
+            <h4 >4. Cuidado de la Suspensión y Amortiguadores</h4>
+            
+                <div class="card card-body">
+                    <p>Este modelo, siendo más antiguo, puede tener componentes de suspensión desgastados que afectan la conducción y el confort. Revisa los amortiguadores y los resortes cada 15,000 kilómetros y sustitúyelos si notas que el auto pierde estabilidad o rebota excesivamente. Mantener la suspensión en buen estado mejora la seguridad y la calidad de manejo.</p>
+                </div>
+              
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center mb-3">
+        <div class="col-md-8">
+            <h4>5. Control del Sistema de Enfriamiento</h4>
+            
+                <div class="card card-body">
+                    <p>Un motor sobrecalentado puede causar daños graves. Revisa regularmente el nivel de refrigerante y asegúrate de que el radiador esté limpio. Cambia el líquido refrigerante al menos una vez al año y verifica que no haya fugas en las mangueras. También es importante revisar el estado del termostato y el ventilador para garantizar una correcta circulación del refrigerante.
+
+                        Estos consejos te ayudarán a mantener tu Chevy Clásico en buen estado, asegurando una conducción segura y prolongando la vida útil de tu vehículo.</p>
+                </div>
+              
+        </div>
+    </div>
+      
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center">
+    <div class="row container-fluid justify-content-center align-items-center no-margin">
+      <div class="text-center col-lg-8 col-md-6 col-12">
+        <p>Materia: Diseño y Desarrollo Web - 
+          <br>    
+          Curso: 2688 - Grupo: 5</p>
+        <p>© Todos los derechos reservados - 
+          <br>
+          Sitio desarrollado para uso educativo - 2024
+        </p>
+      </div>
+      <div class="text-center col-lg-4 col-md-6">
+        <img src="../assets/uade-logo.png" alt="logo uade" />
+      </div>
+    </div>
+  </footer>
+
+<!-- Scripts de Bootstrap (necesarios para el funcionamiento del menú hamburguesa) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
