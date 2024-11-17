@@ -3,30 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Ejemplo</title>
+    <title>Chevrolet Chevy Care | Galeria</title>
+    <link rel="icon" href="../favicon.png" type="image/png" />
     <!-- Vincula el CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" /> 
     <style>
-
-        :root {
-            --color-primario: #f2e094;
-            --color-secundario: #a19218;
-            --color-terciario: #be5944;
-            --color-fondo: #fef9ec;
-            --color-oscuro: #1b3d2f;
-            --color-oscuro-2: #4b4737;
-        }
-        /* Aseguramos que el body ocupe toda la altura de la ventana */
-        html, body {
-            height: 100%;
-        }
-
-        /* Usamos flexbox para distribuir el contenido */
-        body {
-            display: flex;
-            flex-direction: column;
-            background-color: var(--color-fondo);
-        }
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -82,16 +64,6 @@
             flex-grow: 1;
             
         }
-
-        /* Estilo para el header y el logo */
-        .navbar-brand {
-            flex-grow: 1;
-            text-align: left;
-        }
-        .navbar-nav {
-            margin-left: auto;
-        }
-
         /* Asegurarse de que el logo se mantenga centrado en pantallas pequeñas */
         @media (max-width: 768px) {
             .navbar-brand {
@@ -128,45 +100,6 @@
         }
 
 
-        /* Estilo para el footer */
-        footer {
-            background-color: var(--color-oscuro);
-            color: var(--color-fondo);
-            padding: 1rem;
-            text-align: center;
-        }
-        footer p {
-            color: #fff;
-            margin-bottom: 0;
-            span{
-            color: #FFF;
-            padding-left: 15px;
-            }
-        }
-        
-        footer img {
-            padding: 0.5em;
-            max-width: 220px;
-        }
-        footer br{
-            display: none;
-        }
-        header {
-            background-color: var(--color-primario);
-            color: var(--color-oscuro);
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        .logo-img {
-            width: auto;
-            height: 75px;
-        }
-        .img-fluid {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
     </style>
 </head>
 <body>
@@ -193,7 +126,7 @@
                     <a class="nav-link" href="./consejos.html">Consejos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><b>Galería</b></a>
+                    <a class="nav-link active" href="#">Galería</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./faq.html">Preguntas Frecuentes</a>
@@ -208,7 +141,7 @@
     <div class="row justify-content-center align-items-center text-center" style="margin-bottom: 30px; margin-top: 10px;">
         <div class="col-md-6">
             <h1><b>Galería de Chevy Care</b></h1>
-            <p><i>Aquí encontrarás una selección de los mejores trabajos de Chevy Care</i></p>
+            <h6><i>Aquí encontrarás una selección de los mejores trabajos de Chevy Care</i></h6>
         </div>
     </div>
     <div class="gallery">
