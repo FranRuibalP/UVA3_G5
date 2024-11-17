@@ -30,8 +30,20 @@ main {
     flex-grow: 1;
     text-align: left;
 }
+#navbarNav{
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
 .navbar-nav {
     margin-left: auto;
+}
+nav{
+    li{
+        padding-right: 15px;
+    }
+}
+.nav-item a:hover{
+    color: var(--color-terciario);
 }
 h1{
     color: var(--color-secundario);
