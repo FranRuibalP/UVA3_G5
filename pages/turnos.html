@@ -1,235 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chevrolet Chevy Care | Turnos</title>
-    <link rel="icon" href="../favicon.png" type="image/png" />
-    <!-- Vincula el CSS de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css" /> 
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chevrolet Chevy Care | Turnos</title>
+        <link rel="icon" href="../favicon.png" type="image/png" />
+        <!-- Vincula el CSS de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../styles.css" /> 
+        <style>
 
-        h2 {
-        color: var(--color-secundario); /* Título en color azul */
-        }
+            h2 {
+            color: var(--color-secundario); /* Título en color azul */
+            }
 
-        .form-control, .form-select {
-            border-radius: 5px;
-            border-color: var(--color-secundario);
-        }
+            .form-control, .form-select {
+                border-radius: 5px;
+                border-color: var(--color-secundario);
+            }
 
-        .form-control:focus, .form-select:focus {
-            border-color: var(--color-primario);
-            box-shadow: 0 0 5px #e4cd218a;
-        }
+            .form-control:focus, .form-select:focus {
+                border-color: var(--color-primario);
+                box-shadow: 0 0 5px #e4cd218a;
+            }
 
-        .btn-primary {
-            background-color: var(--color-primario);
-            border-color: var(--color-secundario);
-            color: var(--color-oscuro-2);
-        }
+            .btn-primary {
+                background-color: var(--color-primario);
+                border-color: var(--color-secundario);
+                color: var(--color-oscuro-2);
+            }
 
-        .btn-primary:hover {
-            background-color: var(--color-secundario);
-            border-color: var(--color-primario);
-            color: var(--color-fondo);
-        }
+            .btn-primary:hover, .btn-primary:active {
+                background-color: var(--color-terciario);
+                border-color: var(--color-primario);
+                color: var(--color-fondo);
+            }
 
-       
-    </style>
-</head>
-<body>
-
-<!-- HEADER -->
-<header>
-    <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="../index.html"><image class="logo-img" src="../assets/logo_opcion_3.png" alt="Bootstrap"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="./servicios.html">Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./nosotros.html">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="./turnos.html">Turnos en Línea</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./consejos.html">Consejos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./galeria.html">Galería</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./presupuesto.html">Presupuesto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./faq.html">Preguntas Frecuentes</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
-<!-- BODY -->
-<main class="container mt-2 mb-5">
-    <div class="row justify-content-center align-items-center text-center" style="margin-bottom: 30px; margin-top: 10px;"> 
-        <div class="col-md-6">
-            <h1><b>Turnos en Línea</b></h1>
-            <h6><i>Selecciona el turno y la fecha que desees reservar</i></h6>
-        </div>
-    </div>
-    <div class="container my-4">
         
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form id="appointmentForm">
-                    <!-- Input de Nombre -->
-                    <div class="mb-3">
-                        <label for="nameInput" class="form-label">Nombre:</label>
-                        <input type="text" class="form-control" id="nameInput" placeholder="Ingresa tu nombre" required>
-                    </div>
+        </style>
+    </head>
+    <body>
 
-                    <!-- Input de Email -->
-                    <div class="mb-3">
-                        <label for="emailInput" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="emailInput" placeholder="Ingresa tu email" required>
-                    </div>
+        <!-- HEADER -->
+        <header>
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="../index.html"><image class="logo-img" src="../assets/logo_opcion_3.png" alt="Bootstrap"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./turnos.html">Turnos en Línea</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./consejos.html">Consejos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./galeria.html">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./presupuesto.html">Presupuesto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./faq.html">Preguntas Frecuentes</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-                    <!-- Dropdown de Servicios -->
-                    <div class="mb-3">
-                        <label for="serviceSelect" class="form-label">Selecciona el Servicio:</label>
-                        <select id="serviceSelect" class="form-select" required>
-                            <option value="" selected disabled>Elige un servicio</option>
-                            <option value="reparacion">Reparación</option>
-                            <option value="mantenimiento">Mantenimiento</option>
-                            <option value="diagnostico">Diagnóstico</option>
-                            <option value="instalacion">Instalación de Accesorios</option>
-                        </select>
-                    </div>
+        <!-- BODY -->
+        <main class="container mt-2 mb-5">
+            <div class="row justify-content-center align-items-center text-center" style="margin-bottom: 30px; margin-top: 10px;"> 
+                <div class="col-md-10">
+                    <h1><b>Turnos en Línea</b></h1>
+                    <h6><i>Selecciona el turno y la fecha que desees reservar</i></h6>
+                </div>
+            </div>
+            <div class="container my-4">
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <form id="appointmentForm">
+                            <!-- Input de Nombre -->
+                            <div class="mb-3">
+                                <label for="nameInput" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nameInput" placeholder="Ingresa tu nombre" required>
+                            </div>
 
-                    <!-- Selector de Fecha -->
-                    <div class="mb-3">
-                        <label for="datePicker" class="form-label">Fecha del Turno:</label>
-                        <input type="date" class="form-control" id="datePicker" placeholder="Selecciona una fecha" required>
-                    </div>
+                            <!-- Input de Email -->
+                            <div class="mb-3">
+                                <label for="emailInput" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="Ingresa tu email" required>
+                            </div>
 
-                    <!-- Selector de Horarios -->
-                    <div class="mb-3">
-                        <label for="timePicker" class="form-label">Horario del Turno:</label>
-                        <select id="timePicker" class="form-select" required>
-                            <option value="" selected disabled>Elige un horario</option>
-                        </select>
+                            <!-- Dropdown de Servicios -->
+                            <div class="mb-3">
+                                <label for="serviceSelect" class="form-label">Selecciona el Servicio:</label>
+                                <select id="serviceSelect" class="form-select" required>
+                                    <option value="" selected disabled>Elige un servicio</option>
+                                    <option value="reparacion">Reparación</option>
+                                    <option value="mantenimiento">Mantenimiento</option>
+                                    <option value="diagnostico">Diagnóstico</option>
+                                    <option value="instalacion">Instalación de Accesorios</option>
+                                </select>
+                            </div>
+
+                            <!-- Selector de Fecha -->
+                            <div class="mb-3">
+                                <label for="datePicker" class="form-label">Fecha del Turno:</label>
+                                <input type="date" class="form-control" id="datePicker" placeholder="Selecciona una fecha" required>
+                            </div>
+
+                            <!-- Selector de Horarios -->
+                            <div class="mb-3">
+                                <label for="timePicker" class="form-label">Horario del Turno:</label>
+                                <select id="timePicker" class="form-select" required>
+                                    <option value="" selected disabled>Elige un horario</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Botón de Confirmación -->
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary w-100">Confirmar Turno</button>
+                            </div>
+                        </form>
                     </div>
-                    
-                    <!-- Botón de Confirmación -->
-                    <div class="mb-3">
-                        <button type="submit" class="btn btn-primary w-100">Confirmar Turno</button>
-                    </div>
-                </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="text-center">
+            <div class="row container-fluid justify-content-center align-items-center no-margin">
+            <div class="text-center col-lg-8 col-md-6 col-12">
+                <p>Materia: Diseño y Desarrollo Web - 
+                <br>    
+                Curso: 2688 - Grupo: 5</p>
+                <p>© Todos los derechos reservados - 
+                <br>
+                Sitio desarrollado para uso educativo - 2024
+                </p>
+            </div>
+            <div class="text-center col-lg-4 col-md-6">
+                <img src="../assets/uade-logo.png" alt="logo uade" />
+            </div>
+            </div>
+        </footer>
+         <!-- Modal de turnos -->
+         <div class="modal fade" id="turnoModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="turnoModalLabel">¡Turno confirmado!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <p>Turno confirmado, <span id="userName"></span>. El dia <span id="selectedDate"></span> en el horario de <span id="selectedTime"></span> hs., para realizar el servicio de <span id="selectedService"></span>. Te enviamos toda la informacion al mail que nos dejaste <span id="selectedMail"></span></p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
             </div>
         </div>
-    </div>
-</main>
-
-<!-- FOOTER -->
-<footer class="text-center">
-    <div class="row container-fluid justify-content-center align-items-center no-margin">
-      <div class="text-center col-lg-8 col-md-6 col-12">
-        <p>Materia: Diseño y Desarrollo Web - 
-          <br>    
-          Curso: 2688 - Grupo: 5</p>
-        <p>© Todos los derechos reservados - 
-          <br>
-          Sitio desarrollado para uso educativo - 2024
-        </p>
-      </div>
-      <div class="text-center col-lg-4 col-md-6">
-        <img src="../assets/uade-logo.png" alt="logo uade" />
-      </div>
-    </div>
-  </footer>
-
-<!-- Scripts de Bootstrap (necesarios para el funcionamiento del menú hamburguesa) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-<script>
-    // Bloquear fechas anteriores a la fecha actual y fines de semana
-    const datePicker = document.getElementById('datePicker');
-    const today = new Date().toISOString().split('T')[0];
-    datePicker.setAttribute('min', today);
-
-    // Función para verificar si una fecha es fin de semana
-    function isWeekend(date) {
-        const day = date.getDay();
-        if (day === 0) {
-            return true; // Domingo
-        } else if (day === 6) {
-            return true; // Sábado
-        }else {
-            return false; // No es fin de semana
-        }
-    }
-
-    // Listener para bloquear fines de semana
-    datePicker.addEventListener('input', function() {
-        const selectedDate = new Date(this.value);
-        if (isWeekend(selectedDate)) {
-            alert("No se permiten turnos los Domingos. Por favor, elija un día hábil.");
-            this.value = ''; // Limpia el valor si es fin de semana
-        }
-    });
-
-    // Generar opciones de horarios
-    const timePicker = document.getElementById('timePicker');
-
-    function populateTimeOptions() {
-        const startHour = 9;
-        const endHour = 17;
-        const interval = 30; // Intervalo de 30 minutos
-
-        for (let hour = startHour; hour < endHour; hour++) {
-            for (let min = 0; min < 60; min += interval) {
-                const formattedHour = hour.toString().padStart(2, '0');
-                const formattedMin = min.toString().padStart(2, '0');
-                const ampm = hour < 12 ? 'am' : 'pm';
-                const displayHour = hour > 12 ? hour - 12 : hour;
-                const displayTime = `${displayHour}:${formattedMin} ${ampm}`;
-                const option = document.createElement('option');
-                option.value = `${formattedHour}:${formattedMin}`;
-                option.textContent = displayTime;
-                timePicker.appendChild(option);
-            }
-        }
-    }
-
-    // Inicializar opciones de horarios
-    populateTimeOptions();
-
-    // Manejar la confirmación del turno
-    const form = document.getElementById('appointmentForm');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const name = document.getElementById('nameInput').value;
-        const email = document.getElementById('emailInput').value;
-        const service = document.getElementById('serviceSelect').value;
-        const date = document.getElementById('datePicker').value;
-        const time = document.getElementById('timePicker').value;
-
-        if (name && email && service && date && time) {
-            alert(`¡Turno confirmado!\nNombre: ${name}\nEmail: ${email}\nServicio: ${service}\nFecha: ${date}\nHora: ${time}\nSe ha enviado la confirmación a tu email.`);
-        } else {
-            alert("Por favor, completa todos los campos antes de confirmar el turno.");
-        }
-    });
-</script>
+        <!-- Scripts de Bootstrap (necesarios para el funcionamiento del menú hamburguesa) -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <script src="../assets/js/turnosForm.js"></script>
 
 
-</body>
+    </body>
 </html>

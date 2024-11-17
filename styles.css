@@ -107,6 +107,7 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .boton-home{
+    margin-bottom: 1em;
     background-color: #2B3123;
     color: #FFF;
     border: 0;
