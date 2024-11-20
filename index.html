@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chevrolet Chevy Care: Clínica especializada en mantenimiento de vehículos Chevrolet Chevy. Servicio confiable para apasionados y coleccionistas.">
+    <meta name="keywords" content="Chevrolet, Chevy, mantenimiento Chevy, clínica Chevy, servicio Chevrolet, coleccionistas Chevy">
+    <meta name="author" content="Chevrolet Chevy Care">
+    <meta name="robots" content="index, follow">
     <title>Chevrolet Chevy Care | Home </title>
     <!-- Vincula el CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" /> 
+    <link rel="icon" href=" ./favicon.png" type="image/png" />
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
     <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="./index.html"><image class="logo-img" src="./assets/logo_opcion_3.png" alt="Bootstrap"></a>
+        <a class="navbar-brand" href="./index.html"><image class="logo-img" src="./assets/logo_opcion_3.png" alt="Bootstrap"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,7 +43,7 @@
                     <a class="nav-link" href="./pages/presupuesto.html">Presupuesto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./pages/faq.html">Preguntas Frecuentes</a>
+                    <a class="nav-link" href="./pages/preguntas-frecuentes.html">Preguntas Frecuentes</a>
                 </li>
             </ul>
         </div>
@@ -66,12 +71,12 @@
                 ¿Listo para darle a tu Chevy el cuidado que merece? 
                 Solicita tu presupuesto hoy y déjanos encargarnos de mantener tu auto en su mejor estado.</p>
                 <div>
-                    <button class="boton-home">Veni a visitarnos</button>
+                    <button class="boton-home" onclick="goToPage('./pages/turnos.html')">Veni a visitarnos</button>
                 </div>
         </div>
         <!-- Imagen grande a la derecha -->
         <div class="col-md-6">
-            <img src="./assets/chevy-landing.png" alt="Imagen" class="img-fluid mb-3">
+            <img src="./assets/chevy-landing.png" alt="Imagen chevy" class="img-fluid mb-3">
         </div>
     </div>
 </main>
@@ -93,7 +98,11 @@
       </div>
     </div>
   </footer>
-
+  <script>
+    function goToPage(url){
+        window.location.href = url
+    }
+  </script>
 <!-- Scripts de Bootstrap (necesarios para el funcionamiento del menú hamburguesa) -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
