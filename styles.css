@@ -62,15 +62,15 @@ h6{
     text-align: center;
 }
 .btn-primary {
-    background-color: var(--color-primario);
-    border-color: var(--color-secundario);
-    color: var(--color-oscuro-2);
+    background-color: var(--color-primario)!important;
+    border-color: var(--color-secundario)!important;
+    color: var(--color-oscuro-2)!important;
 }
 
 .btn-primary:hover, .btn-primary:active, .btn:first-child:active {
-    background-color: var(--color-terciario);
-    border-color: var(--color-primario);
-    color: var(--color-fondo);
+    background-color: var(--color-terciario)!important;
+    border-color: var(--color-primario)!important;
+    color: var(--color-fondo)!important;
 }
 /* Asegurarse de que el logo se mantenga centrado en pantallas pequeñas */
 @media (max-width: 768px) {
