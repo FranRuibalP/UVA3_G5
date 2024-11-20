@@ -54,7 +54,6 @@ populateTimeOptions();
 const form = document.getElementById('appointmentForm');
 const turnosModal = new bootstrap.Modal(document.getElementById('turnoModal'));
 const userNameSpan = document.getElementById('userName');
-const selectedServiceSpan = document.getElementById('selectedService');
 const selectedMailSpan = document.getElementById('selectedMail');
 const selectedDate = document.getElementById('selectedDate');
 const selectedTime = document.getElementById('selectedTime');
@@ -63,13 +62,11 @@ form.addEventListener('submit', function(event) {
 
     const name = document.getElementById('nameInput').value;
     const email = document.getElementById('emailInput').value;
-    const service = document.getElementById('serviceSelect').value;
     const date = document.getElementById('datePicker').value;
     const time = document.getElementById('timePicker').value;
 
-    if (name && email && service && date && time) {
+    if (name && email && date && time) {
         userNameSpan.textContent = name
-        selectedServiceSpan.textContent = service
         selectedDate.textContent = date
         selectedTime.textContent = time
         selectedMailSpan.textContent = email

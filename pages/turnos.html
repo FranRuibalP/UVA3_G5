@@ -76,46 +76,42 @@
                 <div class="row justify-content-center">
                     <div class="col-md-10">
                         <form id="appointmentForm">
-                            <!-- Input de Nombre -->
-                            <div class="mb-3">
-                                <label for="nameInput" class="form-label">Nombre:</label>
-                                <input type="text" class="form-control" id="nameInput" placeholder="Ingresa tu nombre" required>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <!-- Input de Nombre -->
+                                    <div class="mb-3">
+                                        <label for="nameInput" class="form-label">Nombre:</label>
+                                        <input type="text" class="form-control" id="nameInput" placeholder="Ingresa tu nombre" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                     <!-- Input de Email -->
+                                    <div class="mb-3">
+                                        <label for="emailInput" class="form-label">Email:</label>
+                                        <input type="email" class="form-control" id="emailInput" placeholder="Ingresa tu email" required>
+                                    </div>
+                                </div>
                             </div>
-
-                            <!-- Input de Email -->
-                            <div class="mb-3">
-                                <label for="emailInput" class="form-label">Email:</label>
-                                <input type="email" class="form-control" id="emailInput" placeholder="Ingresa tu email" required>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <!-- Selector de Fecha -->
+                                    <div class="mb-3">
+                                        <label for="datePicker" class="form-label">Fecha del Turno:</label>
+                                        <input type="date" class="form-control" id="datePicker" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Selector de Horarios -->
+                                    <div class="mb-3">
+                                        <label for="timePicker" class="form-label">Horario del Turno:</label>
+                                        <select id="timePicker" class="form-select" required>
+                                            <option value="" selected disabled>Elige un horario</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-
-                            <!-- Dropdown de Servicios -->
-                            <div class="mb-3">
-                                <label for="serviceSelect" class="form-label">Selecciona el Servicio:</label>
-                                <select id="serviceSelect" class="form-select" required>
-                                    <option value="" selected disabled>Elige un servicio</option>
-                                    <option value="reparacion">Reparación</option>
-                                    <option value="mantenimiento">Mantenimiento</option>
-                                    <option value="diagnostico">Diagnóstico</option>
-                                    <option value="instalacion">Instalación de Accesorios</option>
-                                </select>
-                            </div>
-
-                            <!-- Selector de Fecha -->
-                            <div class="mb-3">
-                                <label for="datePicker" class="form-label">Fecha del Turno:</label>
-                                <input type="date" class="form-control" id="datePicker" required>
-                            </div>
-
-                            <!-- Selector de Horarios -->
-                            <div class="mb-3">
-                                <label for="timePicker" class="form-label">Horario del Turno:</label>
-                                <select id="timePicker" class="form-select" required>
-                                    <option value="" selected disabled>Elige un horario</option>
-                                </select>
-                            </div>
-                            
                             <!-- Botón de Confirmación -->
-                            <div class="mb-3">
+                            <div class="mb-3 mt-4">
                                 <button type="submit" class="btn btn-primary w-100">Confirmar Turno</button>
                             </div>
                         </form>
@@ -152,7 +148,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                <p>Turno confirmado, <span id="userName"></span>. El dia <span id="selectedDate"></span> en el horario de <span id="selectedTime"></span> hs., para realizar el servicio de <span id="selectedService"></span>. Te enviamos toda la informacion al mail que nos dejaste <span id="selectedMail"></span></p>
+                <p>Turno confirmado, <span id="userName"></span>. El dia <span id="selectedDate"></span> en el horario de <span id="selectedTime"></span> hs. Te enviamos toda la informacion al mail que nos dejaste <span id="selectedMail"></span></p>
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
