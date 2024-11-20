@@ -66,6 +66,9 @@ h6{
     border-color: var(--color-secundario)!important;
     color: var(--color-oscuro-2)!important;
 }
+.resaltar{
+    color: var(--color-terciario);
+}
 
 .btn-primary:hover, .btn-primary:active, .btn:first-child:active {
     background-color: var(--color-terciario)!important;

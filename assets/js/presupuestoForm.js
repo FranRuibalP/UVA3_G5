@@ -1,9 +1,8 @@
 const presupuestoForm = document.getElementById('presupuestoForm');
 const presupuestoModal = new bootstrap.Modal(document.getElementById('presupuestoModal'));
 const userNameSpan = document.getElementById('userName');
-const selectedServiceSpan = document.getElementById('selectedService');
-const selectedModeloSpan = document.getElementById('selectedModelo');
 const selectedMailSpan = document.getElementById('selectedMail');
+const selectedService = document.getElementById('selectedService');
 const costSpan = document.getElementById('cost');
 
 presupuestoForm.addEventListener('submit', function(event) {
@@ -12,96 +11,43 @@ presupuestoForm.addEventListener('submit', function(event) {
     // Obtenemos los valores de los campos
     const nombreInput = document.getElementById('nombreInput').value;
     const emailInput = document.getElementById('emailInput').value;
-    const autoSelect = document.getElementById('autoSelect').value;
-    const serviceSelect = document.getElementById('serviceSelect').value;
+    const checkboxes = document.querySelectorAll('input[name="servicio"]:checked');
+    const serviciosSeleccionados = Array.from(checkboxes).map(checkbox => checkbox.value);
 
-    calcularServicio(nombreInput, emailInput, autoSelect, serviceSelect)    
+    calcularServicio(nombreInput, emailInput, serviciosSeleccionados)    
 });
 
-function calcularServicio(nombre, mail, modelo, servicio){
-    let cost = ''
-    switch (servicio) {
-        case 'chapaPintura':
-            if (modelo == 'camaro'){
-                cost = '30000'
-            }
-            if(modelo == 'chevelle'){
-                cost = '25000'
-            }
-            if(modelo == 'corvair'){
-                cost = '20000'
-            }
-            if(modelo == 'camino'){
-                cost = '35000'
-            }
-            break;
-        case 'general':
-            cost = '20000';
-            break;
-        case 'reparacion':
-            if (modelo == 'camaro'){
-                cost = '45000'
-            }
-            if(modelo == 'chevelle'){
-                cost = '40000'
-            }
-            if(modelo == 'corvair'){
-                cost = '50000'
-            }
-            if(modelo == 'camino'){
-                cost = '55000'
-            }
-            break;
-        case 'repuestos':
-            if (modelo == 'camaro'){
-                cost = '50000'
-            }
-            if(modelo == 'chevelle'){
-                cost = '45000'
-            }
-            if(modelo == 'corvair'){
-                cost = '55000'
-            }
-            if(modelo == 'camino'){
-                cost = '60000'
-            }
-            break;
-        case 'neumaticos':
-            if (modelo == 'camaro'){
-                cost = '60000'
-            }
-            if(modelo == 'chevelle'){
-                cost = '80000'
-            }
-            if(modelo == 'corvair'){
-                cost = '95000'
-            }
-            if(modelo == 'camino'){
-                cost = '65000'
-            }
-            break;
-        case 'restauracion':
-            if (modelo == 'camaro'){
-                cost = '200000'
-            }
-            if(modelo == 'chevelle'){
-                cost = '150000'
-            }
-            if(modelo == 'corvair'){
-                cost = '180000'
-            }
-            if(modelo == 'camino'){
-                cost = '220000'
-            }
-            break;
-        default:
-            break;
-    }
-    userNameSpan.textContent = nombre
-    selectedServiceSpan.textContent = servicio
-    selectedModeloSpan.textContent = modelo
-    costSpan.textContent = cost
-    selectedMailSpan.textContent = mail
-    presupuestoModal.show();
+function calcularServicio(nombre, mail, servicios) {
+    let totalCost = 0;
 
+    servicios.forEach(servicio => {
+        switch (servicio) {
+            case 'Chapa y Pintura':
+                totalCost += 65000;
+                break;
+            case 'Mantenimiento general':
+                totalCost += 20000;
+                break;
+            case 'Reparaciones mecanicas':
+                totalCost += 40000;
+                break;
+            case 'Repuestos':
+                totalCost += 50000;
+                break;
+            case 'Inspeccion y mantenimiento de neumaticos':
+                totalCost += 28000;
+                break;
+            case 'Restauracion':
+                totalCost += 100000;
+                break;
+            default:
+                break;
+        }
+    });
+    document.getElementById('userName').textContent = nombre;
+    document.getElementById('selectedService').textContent = servicios.join(', ');
+    document.getElementById('cost').textContent = totalCost;
+    document.getElementById('selectedMail').textContent = mail;
+
+    presupuestoModal.show()
 }
