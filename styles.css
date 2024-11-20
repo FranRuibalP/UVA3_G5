@@ -58,7 +58,20 @@ h6{
 .justify{
     text-align: justify;
 }
+.center{
+    text-align: center;
+}
+.btn-primary {
+    background-color: var(--color-primario);
+    border-color: var(--color-secundario);
+    color: var(--color-oscuro-2);
+}
 
+.btn-primary:hover, .btn-primary:active, .btn:first-child:active {
+    background-color: var(--color-terciario);
+    border-color: var(--color-primario);
+    color: var(--color-fondo);
+}
 /* Asegurarse de que el logo se mantenga centrado en pantallas pequeñas */
 @media (max-width: 768px) {
     .navbar-brand {

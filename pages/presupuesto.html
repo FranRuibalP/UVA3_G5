@@ -22,18 +22,6 @@
                 border-color: var(--color-primario);
                 box-shadow: 0 0 5px #e4cd218a;
             }
-
-            .btn-primary {
-                background-color: var(--color-primario);
-                border-color: var(--color-secundario);
-                color: var(--color-oscuro-2);
-            }
-
-            .btn-primary:hover {
-                background-color: var(--color-terciario);
-                border-color: var(--color-primario);
-                color: var(--color-fondo);
-            }
         </style>
     </head>
     <body>
@@ -60,9 +48,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./galeria.html" aria-label="Explora nuestra galería de imágenes de Chevy restaurados y cuidados">Galería</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./presupuesto.html" aria-label="Solicita un presupuesto para el mantenimiento de tu Chevy">Presupuesto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./preguntas-frecuentes.html" aria-label="Consulta nuestras preguntas frecuentes sobre mantenimiento de Chevy">Preguntas Frecuentes</a>
@@ -112,9 +97,11 @@
                             <label for="serviceSelect" class="form-label">Selecciona el servicio a realizar:</label>
                             <select id="serviceSelect" class="form-select" required>
                                 <option value="" selected disabled>Elige un servicio</option>
-                                <option value="general">Mantenimiento General</option>
+                                <option value="general">Mantenimiento general</option>
+                                <option value="reparacion">Reparaciones mecánicas</option>
                                 <option value="chapaPintura">Chapa y pintura</option>
-                                <option value="repuestos">Repuestos de motor o ruedas</option>
+                                <option value="repuestos">Repuestos originales</option>
+                                <option value="neumaticos">Inspección y mantenimiento neumáticos</option>
                                 <option value="restauracion">Restauración</option>
                             </select>
                         </div>

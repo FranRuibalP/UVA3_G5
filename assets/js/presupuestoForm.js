@@ -36,7 +36,21 @@ function calcularServicio(nombre, mail, modelo, servicio){
             }
             break;
         case 'general':
-            cost = '15000';
+            cost = '20000';
+            break;
+        case 'reparacion':
+            if (modelo == 'camaro'){
+                cost = '45000'
+            }
+            if(modelo == 'chevelle'){
+                cost = '40000'
+            }
+            if(modelo == 'corvair'){
+                cost = '50000'
+            }
+            if(modelo == 'camino'){
+                cost = '55000'
+            }
             break;
         case 'repuestos':
             if (modelo == 'camaro'){
@@ -50,6 +64,20 @@ function calcularServicio(nombre, mail, modelo, servicio){
             }
             if(modelo == 'camino'){
                 cost = '60000'
+            }
+            break;
+        case 'neumaticos':
+            if (modelo == 'camaro'){
+                cost = '60000'
+            }
+            if(modelo == 'chevelle'){
+                cost = '80000'
+            }
+            if(modelo == 'corvair'){
+                cost = '95000'
+            }
+            if(modelo == 'camino'){
+                cost = '65000'
             }
             break;
         case 'restauracion':
