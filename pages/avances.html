@@ -5,24 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avances Chevrolet Chevy Case</title>
     <link rel="icon" href="../favicon.png" type="image/png" />
+    <!-- Vincula el CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" /> 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
         body{
             font-family: 'Lato', sans-serif;
-            max-width: 1280px;
             margin: auto;
             background-color: #F6F4F4;
         }
+        main{
+            padding: 0 16px;
+        }
         h1{
+            margin-top:16px;
             text-align: center;
             color: #2B3123;
         }
-        h2{
-            color: #E7D33E;
-        }
         h3{
-            color: #CC2121;
+            color: #A19218;
+        }
+        h4{
+            color: #be5944;
         }
         p{
             font-size: 18px;
@@ -50,11 +56,11 @@
             background-color: #f2e094;
         }
         .color2{
-            background-color: #2B3123;
-            color: #FFF;
+            background-color: #fef9ec;
+            color: #333;
         }
         .color3{
-            background-color: #CC2121;
+            background-color: #be5944;
             color: #FFF;
         }
         .color4{
@@ -62,9 +68,6 @@
             color: #333;
         }
         @media (min-width:380px) and (max-width:767px){
-            body{
-                padding: 0 16px;
-            }
             .identidad{
                 flex-direction: column;
             }
@@ -73,55 +76,115 @@
     </style>
 </head>
 <body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <a class="navbar-brand" href="../index.html"><img class="logo-img" src="../assets/logo_opcion_3.png" alt="Bootstrap"/></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./servicios.html" aria-label="Ver los servicios que ofrecemos para Chevy">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html" aria-label="Conoce más sobre nosotros y nuestro equipo en Chevy Care">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./turnos.html" aria-label="Solicita tu turno en línea para mantenimiento de tu Chevy">Turnos en Línea</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./consejos.html" aria-label="Obtén consejos para el mantenimiento de tu Chevy">Consejos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./galeria.html" aria-label="Explora nuestra galería de imágenes de Chevy restaurados y cuidados">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./preguntas-frecuentes.html" aria-label="Consulta nuestras preguntas frecuentes sobre mantenimiento de Chevy">Preguntas Frecuentes</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
     <main>
-        <h1>Avances Chevrolet Chevy Care</h1>
-        <h2>Propuesta</h2>
-        <p>El sitio web de Chevrolet Chevy Care tiene como objetivo principal atraer a propietarios de autos Chevrolet Chevy de colección que buscan servicios de cuidado, remodelación y reparación de alta calidad. El sitio debe transmitir confianza, profesionalismo y un profundo respeto por la nostalgia y el valor sentimental que estos autos tienen para sus dueños.</p>
-        <h2>Publico objetivo</h2>
-        <h3>Demograficos</h3>
-        <p><b>Edad: </b> Principalmente hombres y mujeres de 40 años en adelante.</p>
-        <p><b>Ubicacion: </b> A nivel nacional, en Argentina.</p>
-        <p><b>Ingresos: </b>Personas con ingresos medios a altos, que pueden permitirse invertir en el cuidado y remodelación de autos de colección.</p>
-        <h3>Psicograficos</h3>
-        <p><b>Intereses: </b> Apasionados por los autos de colección, especialmente los Chevrolet Chevy. Interesados en la historia del automóvil y en mantener viva la nostalgia de épocas pasadas.</p>
-        <p><b>Valores: </b>Valoran la calidad, la autenticidad y el respeto por los autos de colección. Buscan un servicio que ofrezca transparencia y comunicación constante.</p>
-        <p><b>Comportamiento: </b>Propietarios de autos Chevy de colección que buscan servicios especializados para mantener sus vehículos en condiciones óptimas. Prefieren empresas que ofrezcan un trato personalizado y que comprendan el valor sentimental de sus autos allevarlos a cualquier taller mecánico.</p>
-        <h2>Identidad visual</h2>
-        <div class="identidad">
-            <div>
-                <h3>Logo</h3>
-                <img src="../assets/logo_opcion_3.png" alt="Logo empresa" />
-            </div>
-            <div>
-                <h3>Slogan</h3>
-                <p>Cuidamos tu auto, cuidamos tu historia</p>
-            </div>
-            <div>
-                <h3>Paleta colores</h3>
-                <div class="paleta">
-                    <div class="color1">#f2e094</div>
-                    <div class="color4">#A19218</div>
-                    <div class="color2">#2B3123</div>
-                    <div class="color3">#CC2121</div>
+        <div class="row justify-content-center"> 
+            <div class="col-md-10">
+                <h1>Avances Chevrolet Chevy Care</h1>
+                <h3>Propuesta</h3>
+                <p>El sitio web de Chevrolet Chevy Care tiene como objetivo principal atraer a propietarios de autos Chevrolet Chevy de colección que buscan servicios de cuidado, remodelación y reparación de alta calidad. El sitio debe transmitir confianza, profesionalismo y un profundo respeto por la nostalgia y el valor sentimental que estos autos tienen para sus dueños.</p>
+                <h3>Publico objetivo</h3>
+                <h4>Demograficos</h4>
+                <p><b>Edad: </b> Principalmente hombres y mujeres de 40 años en adelante.</p>
+                <p><b>Ubicacion: </b> A nivel nacional, en Argentina.</p>
+                <p><b>Ingresos: </b>Personas con ingresos medios a altos, que pueden permitirse invertir en el cuidado y remodelación de autos de colección.</p>
+                <h4>Psicograficos</h4>
+                <p><b>Intereses: </b> Apasionados por los autos de colección, especialmente los Chevrolet Chevy. Interesados en la historia del automóvil y en mantener viva la nostalgia de épocas pasadas.</p>
+                <p><b>Valores: </b>Valoran la calidad, la autenticidad y el respeto por los autos de colección. Buscan un servicio que ofrezca transparencia y comunicación constante.</p>
+                <p><b>Comportamiento: </b>Propietarios de autos Chevy de colección que buscan servicios especializados para mantener sus vehículos en condiciones óptimas. Prefieren empresas que ofrezcan un trato personalizado y que comprendan el valor sentimental de sus autos allevarlos a cualquier taller mecánico.</p>
+                <h3>Identidad visual</h3>
+                <div class="identidad">
+                    <div>
+                        <h4>Logo</h4>
+                        <img src="../assets/logo_opcion_3.png" alt="Logo empresa" />
+                    </div>
+                    <div>
+                        <h4>Slogan</h4>
+                        <p>Cuidamos tu auto, cuidamos tu historia</p>
+                    </div>
+                    <div>
+                        <h4>Paleta colores</h4>
+                        <div class="paleta">
+                            <div class="color1">#f2e094</div>
+                            <div class="color4">#A19218</div>
+                            <div class="color3">#be5944</div>
+                            <div class="color2">#fef9ec</div>
+                            
+                        </div>
+                    </div>
                 </div>
+            
+                
+                <h3>Prototipado</h3>
+                <h4>Arbol</h4>
+                <img src="../assets/Arbol.png" alt="Arbol" style="height: auto; width: 100%;" />
+                <h4>Figma</h4>
+                <p><a href="https://www.figma.com/design/GVWjl1CzMaEMjUsDsk7Rqo/DyDW-Grupo-5?node-id=139-14&t=4ORudEvrDWm0Pi3a-1" target="_blank">Enlace a Figma</a></p>
+                <h4>Github</h4>
+                <p><a href="https://github.com/FranRuibalP/UVA3_G5" target="_blank">Enlace a Github</a></p>
+                <h3>Roles</h3>
+                <ul>
+                    <li><b>Diseñador UX/UI:</b>  Juan Bautista Climen</li>
+                    <li><b>Maquetador:</b> Francisco Ruibal Palacio - Romina Barros</li>
+                    <li><b>Programador:</b> Romina Barros - Francisco Ruibal Palacio</li>
+                    <li><b>Comunicador web:</b> Ailen Gonzalez </li>
+                </ul>
             </div>
         </div>
-       
-        
-        <h2>Prototipado</h2>
-        <h3>Arbol</h3>
-        <img src="../assets/Arbol.png" alt="Arbol" style="height: auto; width: 100%;" />
-        <h3>Figma</h3>
-        <p><a href="https://www.figma.com/design/GVWjl1CzMaEMjUsDsk7Rqo/DyDW-Grupo-5?node-id=139-14&t=4ORudEvrDWm0Pi3a-1" target="_blank">Enlace a Figma</a></p>
-        <h3>Github</h3>
-        <p><a href="https://github.com/FranRuibalP/UVA3_G5" target="_blank">Enlace a Github</a></p>
-        <h2>Roles</h2>
-        <ul>
-            <li><b>Diseñador UX/UI:</b>  Juan Bautista Climen</li>
-            <li><b>Maquetador:</b> Francisco Ruibal Palacio</li>
-            <li><b>Programador:</b> Romina Barros</li>
-            <li><b>Comunicador web:</b> Ailen Gonzalez </li>
-        </ul>
     </main>
+    <!-- FOOTER -->
+<footer class="text-center">
+    <div class="row container-fluid justify-content-center align-items-center no-margin">
+      <div class="text-center col-lg-8 col-md-6 col-12">
+        <p>Materia: Diseño y Desarrollo Web -
+          <br>    
+          Curso: 2688 - Grupo: 5</p>
+        <p>© Todos los derechos reservados - 
+          <br>
+          Sitio desarrollado para uso educativo - 2024
+        </p>
+        <p>Romina Barros, Francisco Ruibal Palacio, Juan Bautista Climent, Ailen Gonzalez</p>
+        <a  class="nav-link" href="https://franruibalp.github.io/UVA2_GRUPO_5/index.html" target="_blank"><u>Consultora DW5</u></a>
+      </div>
+      <div class="text-center col-lg-4 col-md-6">
+        <img src="../assets/uade-logo.png" alt="logo uade" />
+      </div>
+    </div>
+  </footer>
+
+<!-- Scripts de Bootstrap (necesarios para el funcionamiento del menú hamburguesa) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
