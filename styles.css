@@ -19,6 +19,9 @@ body {
     background-color: var(--color-fondo);
     color: #333;
 }
+.navbar{
+    padding: 0 10px;
+}
 /* Modo oscuro */
 body.dark-mode {
     background-color: #121212;
@@ -71,7 +74,10 @@ body.dark-mode {
         border-bottom: 2px solid var(--color-terciario);
     }
     .navbar-toggler{
-        background-color: #fff;
+        background-color: var(--color-terciario);
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
     }
 }
 
