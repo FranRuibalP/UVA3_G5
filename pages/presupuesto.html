@@ -11,6 +11,8 @@
         <link rel="icon" href="../favicon.png" type="image/png" />
         <!-- Vincula el CSS de Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
         <link rel="stylesheet" href="../styles.css" /> 
         <style>
             .form-control, .form-select {
@@ -29,13 +31,34 @@
             .form-check-input:focus{
                 border-color: var(--color-terciario);
             }
+            button[data-bs-toggle="popover"] {
+                margin-left: 5px;
+                background-color: transparent;
+                border: none;
+                color: #053966;
+                cursor: pointer;
+            }
+            .btn:first-child{
+                font-size: 20px;
+                vertical-align: sub;
+                margin-left: -5px;
+            }
+            button[data-bs-toggle="popover"]:hover {
+                background-color: transparent;
+                border: none;
+                color: #053966;
+            }
+            .btn:first-child:active{
+                background-color: transparent !important;
+                color: #053966 !important;
+            }
         </style>
     </head>
     <body>
         <!-- HEADER -->
         <header>
             <nav class="navbar navbar-expand-lg ">
-                <a class="navbar-brand" href="../index.html"><img class="logo-img" src="../assets/logo_opcion_3.png" alt="Bootstrap"/></a>
+                <a class="navbar-brand" href="../index.html"><img class="logo-img" src="../assets/logo.png" alt="Logo de Chevy"/></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -60,6 +83,9 @@
                             <a class="nav-link" href="./preguntas-frecuentes.html" aria-label="Consulta nuestras preguntas frecuentes sobre mantenimiento de Chevy">Preguntas Frecuentes</a>
                         </li>
                     </ul>
+                    <button id="darkModeToggle" class="btn btn-outline-secondary ms-3">
+                        <i class="bi bi-moon"></i> 
+                    </button> 
                 </div>
             </nav>
         </header>
@@ -93,7 +119,25 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Selecciona los servicios a realizar:</label>
+                            <label class="form-label">Selecciona los servicios a realizar
+                                <button 
+                                    type="button" 
+                                    class="btn btn-secondary btn-sm" 
+                                    data-bs-toggle="popover" 
+                                    id="infoButton"
+                                    data-bs-placement="right" 
+                                    data-bs-html="true"
+                                    data-bs-content="
+                                        <b>Precios individuales:</b><br>
+                                        Mantenimiento general: $20000<br>
+                                        Reparaciones mecánicas: $40000<br>
+                                        Chapa y pintura: $65000<br>
+                                        Repuestos: $50000<br>
+                                        Inspección y mantenimiento de neumáticos: $28000<br>
+                                        Restauración: $100000">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                            </label>
                             <div class="row justify-content-center">
                                 <div class="col-md-6">
                                     <div class="form-check">
@@ -151,7 +195,7 @@
                 <a  class="nav-link" href="https://franruibalp.github.io/UVA2_GRUPO_5/index.html" target="_blank"><u>Consultora DW5</u></a>
             </div>
             <div class="text-center col-lg-4 col-md-6">
-                <img src="../assets/uade-logo.png" alt="logo uade" />
+                <img src=".../assets/uade-logo-dark.png" alt="logo uade" />
             </div>
             </div>
         </footer>
@@ -174,11 +218,38 @@
             </div>
             </div>
         </div>
+        
         <script src="../assets/js/general.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
         <!--JS con calculo de prespuesto -->
         <script src="../assets/js/presupuestoForm.js"></script>
         <!-- Scripts de Bootstrap (necesarios para el funcionamiento del menú hamburguesa) -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Inicializar el popover
+                const popoverTrigger = document.getElementById('infoButton');
+                const popover = new bootstrap.Popover(popoverTrigger, {
+                    container: 'body',
+                    trigger: 'manual', // Permite control manual del popover
+                });
+    
+                // Mostrar/ocultar el popover al hacer clic en el botón
+                popoverTrigger.addEventListener('click', function () {
+                    if (popoverTrigger.getAttribute('aria-expanded') === 'true') {
+                        popover.hide();
+                    } else {
+                        popover.show();
+                    }
+                });
+    
+                // Cerrar el popover al hacer clic fuera
+                document.addEventListener('click', function (e) {
+                    if (!popoverTrigger.contains(e.target) && !document.querySelector('.popover')?.contains(e.target)) {
+                        popover.hide();
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

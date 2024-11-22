@@ -17,8 +17,85 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--color-fondo);
+    color: #333;
+}
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
+.card.dark-mode{
+    background-color: #333 !important;
+    border-color: #fff;
+    .card-body{
+        p{
+            color: #fff;
+        }
+    }
+}
+.accordion.dark-mode{
+    .accordion-button{
+        background-color: #333;
+        border-color: #fff;
+        color: #fff;
+    }
+    .accordion-body{
+        background-color: #4b4a4a;
+        border-color: #fff;
+        color: #fff;
+    }
+
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+.modal-content{
+    p, h5{
+        color: #333;
+    }
+    .btn:first-child{
+        font-size: 16px;
+    }
+}
+.navbar.dark-mode {
+    background-color: #1f1f1f;
+    a{
+        color: #fff;
+    }
+    i{
+        color: #fff;
+    }
+    #navbarNav{
+        border-top: 2px solid var(--color-terciario);
+        border-bottom: 2px solid var(--color-terciario);
+    }
+    .navbar-toggler{
+        background-color: #fff;
+    }
+}
+
+footer.dark-mode {
+    background-color: #1f1f1f;
+    color: #fff;
+    p, span{
+        color: #fff;
+    }
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    background-color: transparent;
+    color: var(--color-terciario); 
+}
+.btn:hover{
+    background-color: transparent;
+    color: var(--color-terciario); 
+}
+.btn-outline-secondary{
+    margin-left: 0!important;
+    color: #333;
+    border: none;
+    font-size: 18px;
+}
 /* El main ocupa todo el espacio disponible */
 main {
     flex-grow: 1;
@@ -85,16 +162,16 @@ h6{
 
 /* Estilo para el footer */
 footer {
-    background-color: var(--color-oscuro);
-    color: var(--color-fondo);
+    background-color: var(--color-primario);
+    color: #333;
     padding: 1rem;
     text-align: center;
 }
 footer p {
-    color: #fff;
+    color: #333;
     margin-bottom: 0;
     span{
-    color: #FFF;
+    color: #333;
     padding-left: 15px;
     }
 }
@@ -109,8 +186,6 @@ footer br{
 header {
     background-color: var(--color-primario);
     color: var(--color-oscuro);
-    padding-left: 10px;
-    padding-right: 10px;
 }
 .logo-img {
     width: auto;
