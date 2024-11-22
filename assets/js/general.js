@@ -18,7 +18,8 @@ if(galleryImages.length) {
     });
 }
 document.addEventListener('DOMContentLoaded', function () {
-    const currentPath = window.location.pathname;
+    const allPath = window.location.pathname;
+    let currentPath = allPath.split('/').pop();
     console.log(currentPath)
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
@@ -29,10 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const logo = document.querySelector('.navbar-brand img'); 
     const logoUade = document.querySelector('footer img');
 
-    const logoLight = currentPath == '/index.html' ? './assets/logo.png' : '../assets/logo.png'; 
-    const logoDark = currentPath == '/index.html' ? './assets/logo_dark.png' : '../assets/logo_dark.png' ; 
-    const logoUadeLight = currentPath == '/index.html' ? './assets/uade-logo.png' : '../assets/uade-logo.png'; 
-    const logoUadeDark = currentPath == '/index.html' ? './assets/uade-logo-dark.png' : '../assets/uade-logo-dark.png'; 
+    const logoLight = currentPath == 'index.html' ? './assets/logo.png' : '../assets/logo.png'; 
+    const logoDark = currentPath == 'index.html' ? './assets/logo_dark.png' : '../assets/logo_dark.png' ; 
+    const logoUadeLight = currentPath == 'index.html' ? './assets/uade-logo.png' : '../assets/uade-logo.png'; 
+    const logoUadeDark = currentPath == 'index.html' ? './assets/uade-logo-dark.png' : '../assets/uade-logo-dark.png'; 
     // Cargar la preferencia del modo oscuro desde localStorage
     const darkMode = localStorage.getItem('dark-mode');
     if (darkMode === 'enabled') {
