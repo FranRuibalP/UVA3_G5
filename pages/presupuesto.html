@@ -52,6 +52,11 @@
                 background-color: transparent !important;
                 color: #053966 !important;
             }
+            #presupuestoForm.dark-mode{
+                button[data-bs-toggle="popover"] {
+                    color: #fff;
+                }
+            }
         </style>
     </head>
     <body>
@@ -125,6 +130,7 @@
                                     class="btn btn-secondary btn-sm" 
                                     data-bs-toggle="popover" 
                                     id="infoButton"
+                                    aria-label="Informacion costos"
                                     data-bs-placement="right" 
                                     data-bs-html="true"
                                     data-bs-content="

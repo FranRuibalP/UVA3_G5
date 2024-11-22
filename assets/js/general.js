@@ -20,13 +20,13 @@ if(galleryImages.length) {
 document.addEventListener('DOMContentLoaded', function () {
     const allPath = window.location.pathname;
     let currentPath = allPath.split('/').pop();
-    console.log(currentPath)
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
     const navbar = document.querySelector('.navbar');
     const cards = document.querySelectorAll('.card');
     const footer = document.querySelector('footer');
     const accordion = document.querySelector('.accordion');
+    const iconInfo = document.getElementById('presupuestoForm');
     const logo = document.querySelector('.navbar-brand img'); 
     const logoUade = document.querySelector('footer img');
 
@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             card?.classList.add('dark-mode');
         });
         accordion?.classList.add('dark-mode');
+        iconInfo?.classList.add('dark-mode');
         logo.src = logoDark;
         logoUade.src = logoUadeLight;
         darkModeToggle.innerHTML = '<i class="bi bi-sun"></i>';
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 card?.classList.remove('dark-mode');
             });
             accordion?.classList.remove('dark-mode');
+            iconInfo?.classList.remove('dark-mode');
             logo.src = logoLight;
             logoUade.src = logoUadeDark;
             localStorage.setItem('dark-mode', 'disabled');
@@ -72,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 card?.classList.add('dark-mode');
             });
             accordion?.classList.add('dark-mode');
+            iconInfo?.classList.add('dark-mode');
             logo.src = logoDark;
             logoUade.src = logoUadeLight;
             darkModeToggle.innerHTML = '<i class="bi bi-sun"></i>';
